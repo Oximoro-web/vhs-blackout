@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área Exclusiva de Entrega | VHS Blackout</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      color: #d4af37;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li a {
+      color: #f7d87c;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+
+    li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Entrega para <span id="nome-cliente">Cliente</span></h1>
+  <p>Abaixo estão os arquivos do seu projeto:</p>
+  <ul id="arquivos"></ul>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const cliente = params.get("cliente");
+    const token = params.get("token");
+
+    const dadosClientes = {
+      rafael: {
+        token: "abc123",
+        nome: "Rafael Souza",
+        arquivos: [
+          { nome: "Video Final.mp4", link: "https://drive.google.com/your-link1" },
+          { nome: "Thumbnail.jpg", link: "https://drive.google.com/your-link2" }
+        ]
+      },
+      ana: {
+        token: "xyz456",
+        nome: "Ana Oliveira",
+        arquivos: [
+          { nome: "Evento Ana.zip", link: "https://drive.google.com/your-link3" }
+        ]
+      }
+    };
+
+    const dados = dadosClientes[cliente];
+
+    if (dados && dados.token === token) {
+      document.getElementById("nome-cliente").textContent = dados.nome;
+      const lista = document.getElementById("arquivos");
+      dados.arquivos.forEach(arquivo => {
+        const li = document.createElement("li");
+        li.innerHTML = `<a href="${arquivo.link}" target="_blank">${arquivo.nome}</a>`;
+        lista.appendChild(li);
+      });
+    } else {
+      document.body.innerHTML = "<h2 style='color:red;'>Acesso não autorizado</h2><p>Verifique o link ou entre em contato com o criador.</p>";
+    }
+  </script>
+</body>
+</html>

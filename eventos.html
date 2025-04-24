@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos | VHS Blackout</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background-color: #000;
+      color: white;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.0);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      color: #d4af37;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .banner {
+      height: 90vh;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('capa.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 4rem;
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      color: #d4af37;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+ .evento-section {
+      padding: 6rem 2rem 4rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .evento-section h1 {
+      font-size: 2rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .evento-section p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+
+    .evento-section p em {
+      font-style: italic;
+      color: #f7d87c;
+    }
+
+    .galeria-eventos {
+  column-count: 3;
+  column-gap: 1rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.galeria-eventos img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.1);
+  display: block;
+  break-inside: avoid;
+}
+
+@media (max-width: 900px) {
+  .galeria-eventos {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-eventos {
+    column-count: 1;
+  }
+}
+
+.conteudo-lateral {
+  display: flex;
+  justify-content: flex-start; /* Alinha o texto à esquerda */
+  align-items: center; /* Centraliza verticalmente o texto, caso tenha mais de uma linha */
+  max-width: 60%; /* Ajuste a largura para o texto não ocupar toda a tela */
+  margin: 0 auto;
+}
+
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">vhs.blackout</div>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="eventos.html">Eventos</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Eventos</h1>
+  </section>
+
+   <section class="evento-section">
+    <h1>NARRATIVAS VISUAIS DE EVENTOS MARCANTES</h1>
+    <div class="conteudo-lateral">
+    <p>
+      Mais do que <em>fotografar</em>, meu trabalho consiste em interpretar e eternizar momentos <strong>únicos</strong>.
+      Nesta seleção, apresento uma amostra do meu olhar técnico e criativo aplicado à cobertura de eventos — de grandes celebrações até encontros intimistas.
+      Cada imagem foi pensada para destacar <em>emoções</em>, <em>cenários</em> e <em>detalhes</em> com elegância e fidelidade à atmosfera do acontecimento.
+    </p>
+    </div>
+
+    <div class="galeria-eventos">
+      <img src="photos/evento1.jpg" alt="Foto evento 1">
+      <img src="photos/evento2.jpg" alt="Foto evento 2">
+      <img src="photos/evento3.jpg" alt="Foto evento 3">
+      <img src="photos/evento4.jpg" alt="Foto evento 4">
+    </div>
+  </section>
+
+  <footer>
+    © 2025 VHS Blackout. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
+
