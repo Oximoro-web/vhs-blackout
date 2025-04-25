@@ -1,224 +1,212 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html><html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Área Exclusiva de Entrega | VHS Blackout</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventos | VHS Blackout</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
   <style>
-   * {
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
-    
-  body {
-    font-family: 'Lato', sans-serif;
-    background-color: #000;
-    color: white;
+    }body {
+  font-family: 'Lato', sans-serif;
+  background-color: #000;
+  color: white;
 }
 
-  header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 1rem 2rem;
-      background-color: rgba(0, 0, 0, 0.0);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-      height: 4rem;
-    }
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
 
-     .logo {
-      font-size: 1.5rem;
-      color: #fff;
-      text-transform: uppercase;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 2rem;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #d4af37;
-    }
-
-    
-    .banner {
-      width: 100%;
-      height: 70vh;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('banner.JPG') no-repeat center center/cover;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding-top: 4rem;
-    }
-
-    @media (max-width:786){
-      .banner{
-        height:50vh;
-      }
-    }
-
-    .banner h1 {
-      font-size: 3rem;
-      text-transform: uppercase;
-      color: #fff;
-    }
-
-    p.subtitulo{
-  margin-top: 0;
+.logo {
+  font-size: 1.5rem;
+  color: #d4af37;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size:18px;
-  color: #fff
+  font-weight: bold;
 }
 
-     .section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+nav a {
+  color: white;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
 
-    .section h2 {
-      color: #d4af37;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-    }
+nav a:hover {
+  color: #d4af37;
+}
 
-    .section p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #ccc;
-      text-align: center;
-    }
+.banner {
+  height: 90vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('capa.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 4rem;
+}
 
-    .segurança-section {
-      background: #b38449; 
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #fff;
-      max-width: 800px;
-      margin: 0 auto 3rem;
-      text-align: center;
-    }
-
-    .segurança h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.banner h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
   color: #fff;
 }
-    -------------
-    
-    h1 {
-      color: #d4af37;
-      margin-bottom: 1rem;
-    }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
-    li a {
-      color: #f7d87c;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      margin: 0.5rem 0;
-    }
+.section h2 {
+  color: #d4af37;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
-    li a:hover {
-      text-decoration: underline;
-    }
-     footer {
-      text-align: center;
-      padding: 2rem;
-      color: #888;
-    }
+.section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.evento-section {
+  padding: 6rem 2rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.evento-section h1 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.evento-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.evento-section p em {
+  font-style: italic;
+  color: #f7d87c;
+}
+
+.galeria-eventos {
+  column-count: 3;
+  column-gap: 1rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.galeria-eventos img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.1);
+  display: block;
+  break-inside: avoid;
+}
+
+@media (max-width: 900px) {
+  .galeria-eventos {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .galeria-eventos {
+    column-count: 1;
+  }
+
+  .evento-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .evento-section p {
+    font-size: 0.95rem;
+    padding: 0 1rem;
+  }
+
+  .conteudo-lateral {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+.conteudo-lateral {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 60%;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #888;
+}
 
   </style>
 </head>
 <body>
-   <header>
+  <header>
     <div class="logo">vhs.blackout</div>
     <nav>
       <a href="index.html">Início</a>
       <a href="eventos.html">Eventos</a>
     </nav>
-  </header>
+  </header>  <section class="banner">
+    <h1>Eventos</h1>
+  </section>  <section class="evento-section">
+    <h1>NARRATIVAS VISUAIS DE EVENTOS MARCANTES</h1>
+    <div class="conteudo-lateral">
+      <p>
+        Mais do que <em>fotografar</em>, meu trabalho consiste em interpretar e eternizar momentos <strong>únicos</strong>.
+        Nesta seleção, apresento uma amostra do meu olhar técnico e criativo aplicado à cobertura de eventos — de grandes celebrações até encontros intimistas.
+        Cada imagem foi pensada para destacar <em>emoções</em>, <em>cenários</em> e <em>detalhes</em> com elegância e fidelidade à atmosfera do acontecimento.
+      </p>
+    </div><div class="galeria-eventos">
+  <img src="photos/evento1.jpg" alt="Foto evento 1">
+  <img src="photos/evento2.jpg" alt="Foto evento 2">
+  <img src="photos/evento3.jpg" alt="Foto evento 3">
+  <img src="photos/evento4.jpg" alt="Foto evento 4">
+</div>
 
-  <section class="banner">
-    <h1>Entrega para <span id="nome-cliente">Cliente</span></h1>
-    <p class="subtitulo">Abaixo estão os arquivos do seu projeto:</p>
-    <ul id="arquivos"></ul>
-  </section>  
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const cliente = params.get("cliente");
-    const token = params.get("token");
-
-    const dadosClientes = {
-      rafael: {
-        token: "abc123",
-        nome: "Rafael Souza",
-        arquivos: [
-          { nome: "Video Final.mp4", link: "https://drive.google.com/your-link1" },
-          { nome: "Thumbnail.jpg", link: "https://drive.google.com/your-link2" }
-        ]
-      },
-      ana: {
-        token: "xyz456",
-        nome: "Ana Oliveira",
-        arquivos: [
-          { nome: "Evento Ana.zip", link: "https://drive.google.com/your-link3" }
-        ]
-      }
-    };
-
-    const dados = dadosClientes[cliente];
-
-    if (dados && dados.token === token) {
-      document.getElementById("nome-cliente").textContent = dados.nome;
-      const lista = document.getElementById("arquivos");
-      dados.arquivos.forEach(arquivo => {
-        const li = document.createElement("li");
-        li.innerHTML = `<a href="${arquivo.link}" target="_blank">${arquivo.nome}</a>`;
-        lista.appendChild(li);
-      });
-    } else {
-      document.body.innerHTML = "<h2 style='color:red;'>Acesso não autorizado</h2><p>Verifique o link ou entre em contato com o criador.</p>";
-    }
-  </script>
-    
-    <section class=segurança-section>
-    <h2> Privacidade e segurança </h2>
-    <p> 
-    A segurança e confidencialidade das informações dos clientes são tratadas com máxima prioridade neste site.
-Por esse motivo, o acesso ao material desenvolvido é realizado por meio de um link exclusivo, protegido por token de acesso, garantindo que apenas pessoas autorizadas possam visualizar os conteúdos. Essa abordagem oferece um ambiente privado, seguro e personalizado para cada projeto.
-O link pode ser modificado ou atualizado a qualquer momento, de acordo com as necessidades do cliente, assegurando ainda mais controle e tranquilidade durante o acesso.
-Caso haja qualquer dúvida ou necessidade de ajuste, estou à disposição para prestar suporte com agilidade e atenção.
-
-      Todo o conteúdo disponibilizado nesta área é protegido por direitos autorais e é de uso exclusivo do cliente para fins previamente acordados. A reprodução, distribuição ou uso indevido, parcial ou total, sem autorização prévia e por escrito, não é permitida.
-Ao acessar este ambiente reservado, você concorda com esses termos e reconhece a importância da preservação da integridade e confidencialidade do material compartilhado.
-    </p>
-  </section>
-    
-   <footer>
+  </section>  <footer>
     © 2025 VHS Blackout. Todos os direitos reservados.
   </footer>
-
 </body>
 </html>
