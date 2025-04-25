@@ -28,7 +28,7 @@
 
      .logo {
       font-size: 1.5rem;
-      color: #d4af37;
+      color: #fff;
       text-transform: uppercase;
       font-weight: bold;
     }
@@ -45,6 +45,24 @@
       color: #d4af37;
     }
 
+    
+    .banner {
+      height: 90vh;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url('banner.jpg') no-repeat center center/cover;
+      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 4rem;
+    }
+
+    .banner h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    
     h1 {
       color: #d4af37;
       margin-bottom: 1rem;
@@ -76,9 +94,12 @@
       <a href="eventos.html">Eventos</a>
     </nav>
   </header>
-  <h1>Entrega para <span id="nome-cliente">Cliente</span></h1>
-  <p>Abaixo estão os arquivos do seu projeto:</p>
-  <ul id="arquivos"></ul>
+
+  <section class="banner">
+    <h1>Entrega para <span id="nome-cliente">Cliente</span></h1>
+    <p>Abaixo estão os arquivos do seu projeto:</p>
+    <ul id="arquivos"></ul>
+  </section>  
 
   <script>
     const params = new URLSearchParams(window.location.search);
