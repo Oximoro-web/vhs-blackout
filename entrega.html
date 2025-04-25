@@ -112,7 +112,6 @@
       max-width: 800px;
       margin: 0 auto 3rem;
       text-align: center;
-      text-transform: uppercase;
     }
 
     .segurança h2 {
@@ -166,7 +165,7 @@
     <ul id="arquivos"></ul>
   </section>  
 
-  <section class=section> <script>
+  <script>
     const params = new URLSearchParams(window.location.search);
     const cliente = params.get("cliente");
     const token = params.get("token");
@@ -203,9 +202,8 @@
       document.body.innerHTML = "<h2 style='color:red;'>Acesso não autorizado</h2><p>Verifique o link ou entre em contato com o criador.</p>";
     }
   </script>
-  </section>
-
-  <section class=segurança-section>
+    
+    <section class=segurança-section>
     <h2> Privacidade e segurança </h2>
     <p> 
     A segurança e confidencialidade das informações dos clientes são tratadas com máxima prioridade neste site.
@@ -216,7 +214,8 @@ Caso haja qualquer dúvida ou necessidade de ajuste, estou à disposição para 
       Todo o conteúdo disponibilizado nesta área é protegido por direitos autorais e é de uso exclusivo do cliente para fins previamente acordados. A reprodução, distribuição ou uso indevido, parcial ou total, sem autorização prévia e por escrito, não é permitida.
 Ao acessar este ambiente reservado, você concorda com esses termos e reconhece a importância da preservação da integridade e confidencialidade do material compartilhado.
     </p>
-  </section>  
+  </section>
+    
    <footer>
     © 2025 VHS Blackout. Todos os direitos reservados.
   </footer>
